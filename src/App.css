@@ -1,38 +1,124 @@
-.App {
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color:#373B48 ;
+}
+
+.App{
+display: flex;
+align-items: center;
+justify-content: start;
+min-height: 580px;
+margin: 12px auto;
+width: 520px;
+padding-bottom: 32px;
+border-radius: 20px;
+flex-direction: column;
+}
+
+h1{
+  color: aliceblue;
+  margin: 32px 0;
+  font-size: 24px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.todo_form{
+  margin-bottom: 32px;
+}
+.todo_input{
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: aliceblue;
+  border: 1px solid aliceblue ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo_buttom{
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    #373B44 0%,
+    #8E2DE2 100%
+  );
+  text-transform: capitalize;
+  color: aliceblue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo_input.edit{
+  border: 2px solid #149fff;
+}
+.todo_buttom.edit{
+  background: linear-gradient(
+    90deg,
+    rgba(20,159,255,1) 0%,
+    rgba(17,122,250,1) 100%
+  );
+  padding: 16px 22px;
+}
+.todo-container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  position: relative;
+}
+.todo-row{
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 4px auto;
+  color: aliceblue;
+  background: linear-gradient(
+    90deg,
+    rgba(255,118,20,1) 0%,
+    rgba(255,87,17,1) 100%
+  );
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+.todo-row:nth-child(4n + 1) {
+  background: linear-gradient(
+    90deg,
+    #373B44 0%,
+    #8E2DE2 100%
+  );
 }
 
-.App-link {
-  color: #61dafb;
+.todo-row:nth-child(4n + 2) {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 12, 241, 1) 0%,
+    rgba(250, 0, 135, 1) 100%
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-row:nth-child(4n + 3) {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+}
+.icons{
+  display:flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon{
+  margin-right: 5px;
+  color: aliceblue;
+}
+.edit-icon{
+  color: aliceblue;
 }
